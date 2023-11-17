@@ -1,0 +1,308 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define common styles */
+body {
+    font-family: 'Arial Rounded MT Bold', sans-serif;
+    background-color: var(--bg-color, #f4f4f4);
+    transition: background-color 0.5s;
+    color: var(--text-color, #333);
+    margin: 0;
+    padding: 0;
+}
+
+/* For spacing between lines of text */
+p {
+    line-height: 1.5;
+	margin-bottom: 2.5em;
+}
+
+/* For spacing within a specific element */
+.element {
+    line-height: 1.5;
+	padding-bottom: 2.5em;
+	margin-bottom: 2.5em;
+}
+
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+.sidebara {
+    width: 250px;
+    position: fixed;
+    height: 55%;
+    background-color: var(--sidebar-bg, lightblue); /*lightgreen  #333*/
+    color: var(--sidebar-text-color, black); /*#fff*/
+    padding: 20px;
+    top: 0;
+    overflow-y: auto;
+}
+
+.sidebarf {
+    width: 210px;
+    position: fixed;
+    height: 80%;
+    background-color: var(--sidebar-bg, lightblue); /*lightgreen  #333*/
+    color: var(--sidebar-text-color, black); /*#fff*/
+    padding: 20px;
+    top: 35%;
+    overflow-y: auto;
+	display: flex;
+    flex-direction: column;
+}
+.sidebarf a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    color: #333;
+}
+
+
+.sidebar {
+    width: 250px;
+    position: fixed;
+    height: 80%;
+    background-color: var(--sidebar-bg, lightblue); /*lightgreen  #333*/
+    color: var(--sidebar-text-color, black); /*#fff*/
+    padding: 20px;
+    top: 45%;
+    overflow-y: auto;
+	display: flex;
+    flex-direction: column;
+}
+
+.profile-photo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    margin-bottom: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--sidebar-text-color, blue);
+}
+
+nav a.active {
+            background-color: #ddd; /* Highlight color for active menu item */
+			font-weight: bold;
+			/*border-bottom: 1px solid #ccc;*/
+			font-size: 18px;
+            transition: background-color 0.6s;
+        }
+
+main {
+    margin-left: 270px;
+    padding: 20px;
+}
+
+.hero {
+    background-image: url('ck.PNG'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #fff;
+    padding: 120px 0;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Add any additional styling for your elements below */
+        .line1 {
+            border: 1px solid #ccc; /* Red color for the first line */
+            margin: 10px 0; /* Adjust the margin as needed */
+        }
+
+        .line2 {
+            border: 1px solid #000; /* Green color for the second line */
+            margin: 10px 0; /* Adjust the margin as needed */
+        }
+
+.section {
+    background-color: var(--section-bg, #fff);
+    margin: 20px 0;
+    border: 1px solid var(--border-color, #ddd);
+    border-radius: 5px;
+    padding: 20px;
+    transition: background-color 0.5s, border-color 0.5s;
+}
+
+h1, h2 {
+    color: var(--heading-color, #333);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--sidebar-bg, #333);
+    color: var(--sidebar-text-color, #fff);
+}
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.skills{
+	width:100%;
+	max-width:600px;
+	padding 0 20px;
+}
+.skill-name{
+	font-size:19px;
+	font-width:700;
+	color:#f1f1f1;
+	margin: 20px 0;
+}
+.skill-bar{
+	height:14px;
+	background: #282828;
+	border-radius:3px;
+}
+.skill-per{
+	height:14px;
+	background: #d13639;
+	border-radius:3px;
+	position:relative;
+	animation: fillBars 2.5s 1;
+}
+.skill-per::before{
+	content: attr(per);
+	position:absolute;
+	padding: 4px 6px;
+	background: #f1f1f1;
+	border-radius:4px;
+	font-size: 12px;
+	top: -35px;
+	right: 0;
+	transform: translatex(50%);
+
+}
+.skill-per::after{
+	content: "";
+	position:absolute;
+	width:10px;
+	height:10px;
+	background: #f1f1f1;
+	border-radius:2px;
+	font-size: 12px;
+	top: -20px;
+	right: 0;
+	transform: translatex(50%) rotate(45deg);
+
+}
+@keyframes fillBars{
+from{
+	width: 0;
+}
+to{
+	width: 100%;
+}
+to
+}
+
+/* Media query for screens with a maximum width of 768px (typical for mobile devices) */
+@media (max-width: 768px) {
+    .container {
+
+        flex-direction: column; /* columnStack the sidebar on top of the main content */
+    }
+	   .sidebara {
+        width: 100%; /* Make the sidebar full width */
+		top: 100px;
+        position: static; /* Remove fixed positioning */
+        height: auto; /* Allow the sidebar to expand as needed */
+		top: 10%;
+		margin-top: 80px; 
+
+    }
+
+    .sidebar {
+        width: 100%; /* Make the sidebar full width */
+		height: 100px; /* Make the sidebar full width */
+        position: fixed; /* Remove fixed positioning */
+        height: 10%; /* Allow the sidebar to expand as needed */
+		top: 0%;
+		display: flex;
+		flex-direction: row;
+    }
+	
+	    .sidebarf {
+        width: 100%; /* Make the sidebar full width */
+		height: 10%; /* Make the sidebar full width */
+        position: fixed /* Remove fixed positioning */
+        height: auto; /* Allow the sidebar to expand as needed */
+		top: 0%;
+        
+		display: flex;
+		flex-direction: row;
+    }
+
+    main {
+        margin-left: 0; /* Remove margin for the main content */
+    }
+    
+    .hero {
+        padding: 60px 20px; /* Adjust padding for smaller screens */
+    }
+
+    .hero h1 {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+
+    .hero p {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+        margin-bottom: 20px;
+    }
+}
