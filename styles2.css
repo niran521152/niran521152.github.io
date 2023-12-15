@@ -5,6 +5,9 @@
     box-sizing: border-box;
 }
 
+
+
+
 /* Define common styles */
 body {
     font-family: 'Arial Rounded MT Bold', sans-serif;
@@ -21,6 +24,16 @@ p {
 	margin-bottom: 2.5em;
 }
 
+#quote {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+#quote-btn {
+            padding: 20px 30px;
+            font-size: 1em;
+            cursor: pointer;
+		}
 /* For spacing within a specific element */
 .element {
     line-height: 1.5;
