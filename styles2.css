@@ -320,11 +320,11 @@ to
     }
     
     .hero {
-        padding: 60px 20px; /* Adjust padding for smaller screens */
+        padding: 40px 10px; /* Adjust padding for smaller screens */
     }
 
     .hero h1 {
-        font-size: 2rem; /* Adjust font size for smaller screens */
+        font-size: 1rem; /* Adjust font size for smaller screens */
     }
 
     .hero p {
